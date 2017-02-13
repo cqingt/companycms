@@ -1,0 +1,44 @@
+<!--footer-->
+    <div id="footer" class="clearfix">
+        <div class="copy">
+            <p>服务热线：{$SiteInfo.telephone}</p>
+            <p>Copyright &copy; 2014-2016 www.720map.com 版权所有</p>
+        </div>
+    </div>
+    <ul class="foc clearfix">
+        <li class="sms"> <span><a href="tel:{$SiteInfo.telephone}">电话咨询</a></span> </li>
+        <li class="chat"> <span ><a href="sms:{$SiteInfo.telephone}">发送短信</a></span> </li>
+        <li class="contact" onClick="location.href='{:U('Category/index', array('cid'=>25, 'mobile'=>1))}'"><span>联系方式</span></li>
+    </ul>
+</div>
+<script>
+
+    $(document).ready(function(){
+
+        function wSize(){
+
+            var heights = $(window).height();
+
+            var heighttop=$(".foc").height();
+
+            var focHeights = $("#header").height();
+
+            var mainboxheight=heights - heighttop - focHeights ;
+
+            //var widths = $(window).width();
+
+            //var left = heights ;//heights - ($("#header").height()+71);
+
+            //$(".mianbox").height(left);
+
+            $("#footer").css('marginBottom', heighttop);
+
+            //$(".cont").css('minHeight', mainboxheight);
+        }
+
+        wSize();
+    })
+
+</script>
+</body>
+</html>

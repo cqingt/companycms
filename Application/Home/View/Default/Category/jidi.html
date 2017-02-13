@@ -1,0 +1,61 @@
+<!-- 调用头部文件 -->
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+<!--头部结束-->
+<style>
+    .s-cphover{
+        background: url({$SiteInfo.pic_hover}) no-repeat;
+    }
+</style>
+<!--中间开始-->
+<div class="main">
+    <!-------------------------banner 开始-------------------------------->
+    <div class="zy_banner"><img src="./Public/Uploads/images/jidi.jpg" width="1004" height="310"/></div>
+    <!-------------------------banner 结束-------------------------------->
+    <div class="w1002">
+        <div class="s-zytop">
+            <ul class="clearfix">
+                <li>当前位置：<a href='/'>主页</a> > <a href='#'>基地展示</a> ></li>
+                <li class="s-gg">{$SiteInfo.brand}·{$SiteInfo.slogan}</li>
+            </ul>
+        </div>
+
+        <div class="s-zycenter">
+            <p class="s-btyw">Picture show</p>
+            <p>基地展示</p>
+        </div>
+        <div class="zy-mume  clearfix">
+            <ul></ul>
+        </div>
+        <div class="s-zyfoot">
+            <div class="cplist">
+                <ul class="clearfix">
+                    <foreach name="pictures" item="val">
+                        <li>
+                            <a class="cpimg" href="{:U('Category/base', array('id'=>$val['id']))}">
+                                <img src="{$val.pic}" width="300" height="300" />
+                            </a>
+                            <h3><a href="{:U('Category/base', array('id'=>$val['id']))}" >{$val.title}</a></h3>
+                            <a class="ckxx" href="{:U('Category/base', array('id'=>$val['id']))}" >了解详情</a>
+                            <a href="{:U('Category/base', array('id'=>$val['id']))}" class="s-cphover" ></a>
+                        </li>
+                    </foreach>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--中间结束-->
+
+<!--底部开始-->
+<include file="Public:homefooter"/>
+<script type="text/javascript">
+    $(function () {
+        $(".cplist li").hover(function () {
+            $(this).addClass("cp-hover");
+            $(this).children(".s-cphover").stop(false, true).animate({ 'top': 0 }, 300);
+        }, function () {
+            $(this).removeClass("cp-hover");
+            $(this).children(".s-cphover").stop(false, true).animate({ 'top': -182 }, 300);
+        });
+    });
+</script>

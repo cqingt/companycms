@@ -1,0 +1,53 @@
+<!-- 调用头部文件 -->
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+
+<div class="mainboxbg"></div>
+<div class="mainbox">
+    <div id="header" class="clearfix" style="position:relative;">
+        <div class="back">
+            <a title="返回" href="javascript:history.back();">
+                <img src="__PUBLIC__/Mobile/images/back.jpg"  alt="分类"></a></div>
+        <div class="cpaut">关于我们</div>
+        <div class="flbox"><img src="__PUBLIC__/Mobile/images/fl.jpg" alt="分类"></div>
+    </div>
+    <div class="wap-lm">
+        <foreach name="abouts" item="val">
+            <a href="javascript:void(0);" class="about_li" data-cid="{$val.id}">{$val.name}</a>
+        </foreach>
+    </div>
+    <div class="xingxi clearfix">
+        <div class="content_img">
+
+        </div>
+    </div>
+<br/>
+</div>
+
+<!--中间结束-->
+
+<!-- 调用脚部文件 -->
+
+<script>
+    $('.about_li').on('click', function () {
+        var _that = $(this);
+        var c_id = _that.data('cid');
+        $('.about_li').removeClass('zyhove');
+
+        $.ajax({
+            type: 'POST',
+            url: "{:U('Category/about')}" + '&cid=' + c_id,
+            dataType: 'json',
+            success: function (retdat) {
+                if (retdat.status == 0) {
+                    $('.content_img').html(retdat.content);
+                    _that.addClass('zyhove');
+                    $('.current').text(_that.text());
+                }
+            }
+        });
+    });
+
+    $('.about_li').first().trigger('click'); //初始触发
+
+</script>
+<include file="Public:homefooter"/>

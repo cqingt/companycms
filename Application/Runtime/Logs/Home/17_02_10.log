@@ -1,0 +1,1458 @@
+[ 2017-02-10T00:00:58+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000751s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070021s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070144s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001233s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001386s ]
+
+[ 2017-02-10T00:05:00+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000581s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0025s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0043s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020830s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000719s ]
+
+[ 2017-02-10T00:05:38+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0037s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0035s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000211s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040138s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040361s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000232s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-02-10T00:05:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001277s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001511s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0035s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0024s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000212s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000852s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001095s ]
+
+[ 2017-02-10T00:06:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0025s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000245s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021323s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2017-02-10T00:07:21+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0032s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0026s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008557s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000433s ]
+
+[ 2017-02-10T00:08:37+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0363s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0358s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000260s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006367s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000496s ]
+
+[ 2017-02-10T00:08:59+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001166s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001417s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0033s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026739s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027077s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000675s ]
+
+[ 2017-02-10T00:09:28+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0025s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0051s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000470s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007480s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000780s ]
+
+[ 2017-02-10T00:11:40+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.061514s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0026s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0033s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006603s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000442s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000581s ]
+
+[ 2017-02-10T00:13:13+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0026s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0038s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0037s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004878s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004989s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000275s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000406s ]
+
+[ 2017-02-10T00:18:46+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000596s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0037s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006793s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006902s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000248s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000341s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000820s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000975s ]
+
+[ 2017-02-10T21:02:03+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018082s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0039s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0045s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.122607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.028991s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.029249s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.016871s ]
+INFO: [ app_end ] --END-- [ RunTime:0.017097s ]
+
+[ 2017-02-10T21:05:08+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0041s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000150s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000281s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.077655s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000907s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001037s ]
+
+[ 2017-02-10T21:05:22+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000905s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0033s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0026s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0033s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024739s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001296s ]
+
+[ 2017-02-10T21:05:53+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0292s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0221s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0165s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0033s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000487s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000415s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2017-02-10T21:06:04+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0399s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0395s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000224s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000396s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024553s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000852s ]
+
+[ 2017-02-10T21:06:06+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000181s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000309s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023932s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000528s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2017-02-10T21:06:14+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0047s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0048s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0040s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0009s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000192s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000404s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028576s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028719s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000398s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2017-02-10T21:07:07+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0413s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0026s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022792s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022898s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000230s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000454s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000560s ]
+
+[ 2017-02-10T21:07:18+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000045s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000926s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0041s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027818s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027974s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000708s ]
+
+[ 2017-02-10T21:11:39+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0024s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0027s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0027s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024515s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2017-02-10T21:11:39+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0039s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0032s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000252s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000721s ]
+
+[ 2017-02-10T21:12:26+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000574s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0615s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000221s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006771s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000476s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2017-02-10T21:12:31+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000966s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0036s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0027s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005571s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005675s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2017-02-10T21:31:27+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0044s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000537s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000922s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2017-02-10T21:42:37+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0027s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0040s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0051s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+NOTIC: [8] Undefined variable: productCategory D:\wamp\www\thinkphp\lcm\Application\Runtime\Cache\Home\04427ce356d851ebf0f1058e6afd5995.php 第 124 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010536s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000837s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002172s ]
+
+[ 2017-02-10T21:45:01+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000695s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000722s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000955s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0038s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000208s ]
+NOTIC: [8] Undefined index: title D:\wamp\www\thinkphp\lcm\Application\Runtime\Cache\Home\04427ce356d851ebf0f1058e6afd5995.php 第 127 行.
+NOTIC: [8] Undefined index: title D:\wamp\www\thinkphp\lcm\Application\Runtime\Cache\Home\04427ce356d851ebf0f1058e6afd5995.php 第 127 行.
+NOTIC: [8] Undefined index: title D:\wamp\www\thinkphp\lcm\Application\Runtime\Cache\Home\04427ce356d851ebf0f1058e6afd5995.php 第 127 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012350s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012506s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000895s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001109s ]
+
+[ 2017-02-10T21:45:13+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0028s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0034s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009951s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000211s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2017-02-10T21:48:54+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001074s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001304s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0037s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0035s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000144s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000343s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018472s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018671s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001002s ]
+
+[ 2017-02-10T21:49:01+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0046s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0040s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0034s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0511s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000307s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017602s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017789s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001148s ]
+
+[ 2017-02-10T21:49:05+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0235s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0035s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2017-02-10T21:49:06+08:00 ] 127.0.0.1 /index.php?m=Home&c=Category&a=index&cid=25
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000220s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000571s ]
+
+[ 2017-02-10T21:49:07+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000826s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001090s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0045s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0056s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0039s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0050s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000837s ]
+
+[ 2017-02-10T21:49:08+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000053s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000711s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0031s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0046s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0008s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013210s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000237s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2017-02-10T21:49:57+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000749s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0046s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0030s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0045s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014140s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2017-02-10T21:54:56+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0035s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0029s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026370s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000290s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000409s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2017-02-10T21:54:58+08:00 ] 127.0.0.1 /index.php?m=Home&c=Category&a=index&cid=24
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000444s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=24 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047100s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2017-02-10T21:54:58+08:00 ] 127.0.0.1 /index.php?m=Home&c=Category&a=about&cid=32
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000726s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0041s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0037s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 32  ) LIMIT 1   [ RunTime:0.0004s ]
+
+[ 2017-02-10T21:55:32+08:00 ] 127.0.0.1 /index.php?m=Home&c=Index&a=index&mobile=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `lcm_category` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid = 0 ) ORDER BY sort desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_site` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `lcm_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_email_set` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `lcm_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `lcm_friendlink` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `lcm_friendlink` ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0027s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0033s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'center'  ) ORDER BY a.id desc LIMIT 2   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `lcm_article` [ RunTime:0.0040s ]
+SQL: SELECT a.* FROM lcm_article a,lcm_category c WHERE ( a.status = 0 and c.id = a.fid and c.show_index = 'bottom'  ) ORDER BY a.id desc LIMIT 4   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid = 22 ) ORDER BY id desc  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `lcm_article` WHERE ( status = 0 and fid in (select id from lcm_category where fid=3) and type=2 ) ORDER BY id desc LIMIT 6   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `lcm_category` WHERE ( fid=3 )  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `lcm_slides` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `lcm_slides` ORDER BY id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012317s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+

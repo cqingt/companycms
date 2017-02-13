@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>[title]</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="order by 720map.com" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="telephone=no" name="format-detection" />
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Mobile/js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="__PUBLIC__/Mobile/js/js.js"></script>
+    <!--[if lt IE 9]><script src="__PUBLIC__/Mobile/js/html5.js"></script><![endif]-->
+    <link href="__PUBLIC__/Mobile/css/css.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<ul class="nav">
+    <li><a title="网站首页" href="/">网站首页</a></li>
+    <foreach name = "fenleiListone" item = "vo">
+        <li><a class="c_id_{$vo['id']}" href="{:U('Category/index',array('mobile'=>1,'cid'=>$vo['id']))}">{$vo.name}</a></li>
+    </foreach>
+
+</ul>
+<div class="mainboxbg"></div>
+<div class="mainbox">
+
+    <!--header-->
+

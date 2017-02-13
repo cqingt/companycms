@@ -1,0 +1,84 @@
+<include file="Public/top" title="网站配置"/>
+<link href="__PUBLIC__/Default/jquery-upload-file/css/uploadfile.css" rel="stylesheet">
+<link href="__PUBLIC__/Default/jquery-upload-file/css/uploadfile.custom.css" rel="stylesheet">
+<style>
+    .file-box{
+        position: relative;
+        width: 280px;
+    }
+    .close{
+        position: absolute;
+        right: 22px;
+        z-index: 99;
+        display: none;
+        cursor: pointer;
+    }
+</style>
+<!-- start left -->
+<include file="Public/left"/>
+<!-- end left -->
+<div class="row wrapper border-bottom page-heading">
+    <div class="col-lg-2">
+        <a class="btn btn-primary btn-block" href="{:U('Images/upload_page')}">上传文件</a>
+    </div>
+</div>
+
+<div class="wrapper wrapper-content">
+    <div class="row">
+        <div class="col-sm-12 animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <foreach name="bases" item="item">
+                    <div class="file-box">
+                        <div class="close" data-id="{$item.id}">x</div>
+                        <div class="file">
+                            <a href="{:U('Images/upload_page',array('id'=>$item['id']))}">
+                                <span class="corner"></span>
+                                <div class="image" style="height: 168px;">
+                                    <img alt="image" class="img-responsive" src="{$item.pic}" >
+                                </div>
+                                <div class="file-name">
+                                    {$item.title}
+                                    <br/>
+                                    <small>添加时间：{$item.created|date="Y-m-d",###}</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </foreach>
+
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script src="__PUBLIC__/Default/jquery-upload-file/js/jquery.form.js"></script>
+<script src="__PUBLIC__/Default/jquery-upload-file/js/jquery.uploadfile.js"></script>
+
+<script>
+    $(document).ready(function(){$(".file-box").each(function(){animationHover(this,"pulse");})});
+    $('.file-box').on('mouseover', function() {
+        $(this).find('.close').show();
+    }).on('mouseout', function () {
+        $(this).find('.close').hide();
+    });
+
+    $('.close').on('click', function () {
+        var _that = $(this);
+        var _id = $(this).data('id');
+        if(confirm('确定要删除吗')) {
+            //ajax todo delete
+            $.ajax({
+                type: 'GET',
+                url:"<?php echo U('Images/delete_base') ?>" + '&id=' + _id,
+                dataType: 'json',
+                success: function(retdat){
+                    if (retdat.status == 0) {
+                        _that.parents('.file-box').remove();
+                    }
+                }
+            })
+        }
+    })
+</script>

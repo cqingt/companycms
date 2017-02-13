@@ -1,0 +1,62 @@
+<!-- 调用头部文件 -->
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+
+<!--中间开始-->
+<div class="main">
+    <!-------------------------banner 开始-------------------------------->
+    <div class="zy_banner"><img src="./Public/Uploads/images/about.jpg" width="1004" height="310" /></div>
+    <!-------------------------banner 结束-------------------------------->
+    <div class="w1002">
+        <div class="s-zytop">
+            <ul class="clearfix">
+                <li>当前位置：<a href='/'>主页</a> > <a href='#'>关于我们</a> > <a href='#' class="current">产业链条</a></li>
+                <li class="s-gg">{$SiteInfo.brand}·{$SiteInfo.slogan}</li>
+            </ul>
+        </div>
+
+        <div class="s-zycenter">
+            <p class="s-btyw">ABOUT US</p>
+            <p>关于我们</p>
+        </div>
+        <div class="zy-mume  clearfix">
+            <ul>
+                <foreach name="abouts" item="val">
+                    <li>
+                        <h2><a href="javascript:void(0);" class="about_li" data-cid="{$val.id}">{$val.name}</a></h2>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+        <div class="s-zyfoot">
+
+        </div>
+    </div>
+</div>
+<!--中间结束-->
+
+<!-- 调用脚部文件 -->
+<include file="Public:homefooter"/>
+
+<script>
+    $('.about_li').on('click', function () {
+        var _that = $(this);
+        var c_id = _that.data('cid');
+        $('.about_li').removeClass('zyhove');
+
+        $.ajax({
+            type: 'POST',
+            url: "{:U('Category/about')}" + '&cid=' + c_id,
+            dataType: 'json',
+            success: function (retdat) {
+                if (retdat.status == 0) {
+                    $('.s-zyfoot').html(retdat.content);
+                    _that.addClass('zyhove');
+                    $('.current').text(_that.text());
+                }
+            }
+        });
+    });
+
+    $('.about_li').first().trigger('click'); //初始触发
+
+</script>

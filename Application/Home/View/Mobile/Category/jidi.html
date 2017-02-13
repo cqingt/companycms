@@ -1,0 +1,38 @@
+<!-- 调用头部文件 -->
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+<!--头部结束-->
+
+<div id="header" class="clearfix" style="position:relative;">
+    <div class="back"><a title="返回" href="javascript:history.back();">
+        <img src="__PUBLIC__/Mobile/images/back.jpg" alt="分类"></a></div>
+    <div class="cpaut">基地展示</div>
+    <div class="flbox"><img src="__PUBLIC__/Mobile/images/fl.jpg" alt="分类"></div>
+</div>
+
+<div class="cont clearfix">
+    <ul class="cplist clearfix">
+        <foreach name="pictures" item="val">
+            <li>
+                <a href="{:U('Category/base', array('mobile'=>1,'id'=>$val['id']))}">
+                    <img src="{$val.pic}" alt="">
+                    <p class="title">{$val.title}</p>
+                    <span class="title bg"></span>
+                </a>
+            </li>
+        </foreach>
+    </ul>
+    <div style=" clear:both"></div>
+    <div class="pageListNav">
+        <ul>
+            <li><span class="pageinfo">共 1 页/<?php echo count($pictures); ?> 条记录</span></li>
+
+        </ul>
+    </div>
+</div>
+
+
+<!--底部开始-->
+<include file="Public:homefooter"/>
+<script type="text/javascript">
+
+</script>

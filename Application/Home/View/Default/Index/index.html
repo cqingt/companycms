@@ -1,0 +1,305 @@
+<!-- 调用头部文件 -->
+<include file = "Public:homeheader" title = "{$SiteInfo.title}" />
+<script>
+    jQuery(function () {
+        jQuery('#camera_wrap_2').camera({
+            height: 'auto',
+            loader: 'none',
+            pagination: false,
+            thumbnails: false,
+            easing: 'easeInOutExpo',
+            time: 1000
+        });
+        function width() {
+            var wid = window.screen.width;
+            switch (wid) {
+                case 1920:
+                    jQuery(".fluid_container").height(599)
+                    break;
+                case 1680:
+                    jQuery(".fluid_container").height(524)
+                    break;
+                case 1600:
+                    jQuery(".fluid_container").height(499)
+                    break;
+                case 1440:
+                    jQuery(".fluid_container").height(449)
+                    break;
+                case 1366:
+                    jQuery(".fluid_container").height(426)
+                    break;
+                case 1360:
+                    jQuery(".fluid_container").height(424)
+                    break;
+                case 1280:
+                    jQuery(".fluid_container").height(399)
+                    break;
+                case 1152:
+                    jQuery(".fluid_container").height(359)
+                    break;
+                case 1024:
+                    jQuery(".fluid_container").height(319)
+                    break;
+            }
+        }
+
+        width();
+        jQuery(window).resize(function () {
+            width();
+        });
+    });
+
+    $(function () {
+        $(".s-cplist li").hover(function () {
+            $(this).children(".s-yccpbt").stop(false, true).animate({'top': 0}, 300);
+        }, function () {
+            $(this).children(".s-yccpbt").stop(false, true).animate({'top': -268}, 300);
+        });
+    });
+
+    $(function () {
+        //<!--//--><![CDATA[//><!--
+        var scrollPic_02 = new ScrollPic();
+        scrollPic_02.scrollContId   = "ISL_Cont_1"; //内容容器ID
+        scrollPic_02.arrLeftId      = "LeftArr";//左箭头ID
+        scrollPic_02.arrRightId     = "RightArr"; //右箭头ID
+        scrollPic_02.frameWidth     = 874;//显示框宽度
+        scrollPic_02.pageWidth      = 291; //翻页宽度
+        scrollPic_02.speed          = 10; //移动速度(单位毫秒，越小越快)
+        scrollPic_02.space          = 10; //每次移动像素(单位px，越大越快)
+        scrollPic_02.autoPlay       =  //自动播放
+                scrollPic_02.autoPlayTime   = 3; //自动播放间隔时间(秒)
+        scrollPic_02.initialize(); //初始化
+        //-->
+        //<!]]>
+    });
+    $(function () {
+        $(".s-xgw .s-center li").hover(function () {
+            $(this).addClass("syyr");
+        }, function () {
+            $(this).removeClass("syyr");
+        });
+    });
+
+    $(function () {
+        //News-list
+        //Hover($(".news-list .list li"), "hover");
+        if ($(window).width() < 1440) {
+            if ($(".s-newsnr .img").css("display") == "none") {
+                $(".s-newsnr").width(1002);
+                $(".news-list .list").css({
+                    "float": "none",
+                    "margin": "0 auto"
+                });
+                $(".s-newslist").css("width", $(".s-newslist li").length * 501);
+                if ($(".s-newslist li").length > 2) {
+                    for (i = 0; i < $(".s-newslist li").length / 2; i++) {
+                        $(".news-change").append('<span class="span' + i + '"></span>');
+                    }
+                    $(".news-change span").eq(0).addClass("on");
+                    $(".news-change span").click(function () {
+                        $(this).addClass("on").siblings().removeClass("on");
+                        $(".s-newslist").stop().animate({marginLeft: -501 * $(this).index()}, 500)
+                    })
+                }
+            } else {
+                $(".s-newsnr").css("width", 1002);
+                $(".s-newslist").css("width", $(".s-newslist li").length * 501);
+                for (i = 0; i < $(".s-newslist li").length; i++) {
+                    $(".news-change").append('<span class="span' + i + '"></span>');
+                }
+                $(".news-change span").eq(0).addClass("on");
+                $(".news-change span").click(function () {
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $(".s-newslist").stop().animate({marginLeft: -501 * $(this).index()}, 500)
+                })
+            }
+        } else {
+            $(".s-newsnr").css("width", 1002);
+            $(".s-newslist").css("width", $(".s-newslist li").length * 501);
+            if ($(".s-newslist li").length > 2) {
+                for (i = 0; i < $(".s-newslist li").length / 2; i++) {
+                    $(".news-change").append('<span class="span' + i + '"></span>');
+                }
+                $(".news-change span").eq(0).addClass("on");
+                $(".news-change span").click(function () {
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $(".s-newslist").stop().animate({marginLeft: -501 * $(this).index()}, 500)
+                })
+            }
+        }
+    });
+
+</script>
+<!--中间开始-->
+<div class="main">
+
+    <!-------------------------banner 开始-------------------------------->
+
+    <div class="sy_banner">
+        <div class="fluid_container">
+            <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+                <foreach name="slidesLists" item ="vo" key ="k">
+                    <div data-src="{$vo.pic}"></div>
+                </foreach>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------banner 结束-------------------------------->
+    <div class="w1002">
+        <div class="s-about clearfix">
+            <div class="s-aboutbt"><h2><a target="关于我们" href="about/jianjie/jianjie.html">关于我们</a></h2></div>
+            <div class="s-aboutnr">
+                <div class="s-aboutleft"><img src="{$SiteInfo.about_left}" alt=""/></div>
+                <div class="s-aboutright"><p class="s-wztop">{$SiteInfo.about_title}</p>
+                    <p>{$SiteInfo.about_content}...</p></div>
+            </div>
+            <div class="s-vode"><img src="{$SiteInfo.about_right}" width="311" height="257" alt="配送流程"/></div>
+        </div>
+        <div class="s-cp clearfix">
+            <div class="s-cplist">
+                <ul class="clearfix">
+                    <foreach name="products" item="val">
+                        <li>
+                            <a href="{:U('Category/product', array('id'=>$val['id']))}" title="{$val.title}">
+                                <img src="{$val.pic}" width="268" height="268" alt="{$val.title}"/>
+                            </a>
+                            <div class="s-yccpbt">
+                                <a href="{:U('Category/product', array('id'=>$val['id']))}" title="{$val.title}">
+                                    <h3>{$val.title}</h3>
+                                    <?php
+                                     if ($val['additional']) {
+                                        $arr = explode('|', $val['additional']);
+                                        for ($i=0, $n = count($arr); $i < $n; $i++ ) {
+                                            echo '<p>'.$arr[$i].'</p>';
+                                        }
+                                     }
+                                     ?>
+                                    <p>￥{$val.price}元</p>
+                                </a>
+                            </div>
+                        </li>
+                    </foreach>
+                </ul>
+            </div>
+            <div class="s-cpbt" style="background:url({$SiteInfo.product_right}) no-repeat"><a href="shuiguo/shuiguo.html" target="_blank">查看更多</a></div>
+        </div>
+    </div>
+    <div class="s-yzrp">
+        <div class="s-yzcpw">
+            <div class="s-yzcpbt">
+                <h2 class="l-yzcpbtitem"><a href="jidi/jidi.html" target="_blank">Base display</a></h2>
+                <h2 class="l-yzcpbtit"><a href="jidi/jidi.html" target="_blank">基地展示</a></h2>
+            </div>
+            <div class="s-yzcplb clearfix"><a class="s-leftjt" id="LeftArr" href="javascript:;"></a>
+                <div class="s-xgw clearfix" id="ISL_Cont_1">
+                    <ul class="s-center">
+                        <foreach name="bases" item="vo">
+                            <li>
+                                <a class="s-yzimg" href="jidi/17.html" title="{$vo.title}" >
+                                    <img src="{$vo.pic}" alt="{$vo.title}" width="266"
+                                    height="198"/></a>
+                                <div class="s-yzdb">
+                                    <h3><a href="jidi/17.html" title="{$vo.title}">{$vo.title}</a></h3>
+                                </div>
+                            </li>
+                        </foreach>
+                    </ul>
+                </div>
+                <a class="s-rightjt" id="RightArr" href="javascript:;"></a>
+                <div class="both"></div>
+            </div>
+        </div>
+    </div>
+    <div class="w1002">
+        <div class="s-news">
+            <div class="s-yzcpbt s-newsbt">
+                <h2 class="l-synewsem"><a href="#" target="_blank">company news center</a></h2>
+                <h2 class="l-synews"><a class="l-newschinatit" href="#" target="_blank">公司新闻</a>
+                </h2>
+            </div>
+            <div class="s-newsnr">
+                <div class="s-newslist">
+                    <ul class="clearfix">
+                        <foreach name="companyNews" item="val">
+                            <li class="clearfix">
+                                <div class="s-newsnrl">
+                                    <a href="{:U('Article/index',array('id'=>$val['id']))}" title="{$val.title}">
+                                        <img src="{$val.pic}" width="200" height="110" alt="{$val.title}"/><span></span>
+                                    </a>
+                                </div>
+                                <div class="s-newsnrr">
+                                    <h3>
+                                        <a href="{:U('Article/index',array('id'=>$val['id']))}" title="{$val.title}">{$val.title|mb_substr=0,18,'utf-8'}</a>
+                                    </h3>
+                                    <span>{$val.ctime|date="Y-m-d",###}</span>
+                                    <div class="s-newsfoot">
+                                        <p>{$val.content|strip_tags|mb_substr=0, 60,'utf-8'}...</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </foreach>
+
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div class="news-change"></div>
+            </div>
+        </div>
+        <div class="s-yycz clearfix">
+            <div class="s-aboutbt">
+                <h2><a class="s-yyczbt" href="zhishi/zhishi.html" target="_blank">营养知识</a></h2>
+                <div class="s-ggby">
+                    <a href="news/gongsi/gongsi.html" target="_blank">公司新闻</a>
+
+                    <a href="news/hangye/hangye.html" target="_blank">行业新闻</a>
+
+                    <a href="zhishi/zhishi.html" target="_blank">营养知识</a>
+                </div>
+            </div>
+            <div class="s-yyczl">
+                <div class="news-list sy-news-list">
+                    <div class="list sy-list">
+                        <div class="news-move">
+                            <ul>
+                                <foreach name="nutritionNews" item="val">
+                                    <li class="">
+                                        <div class="time">
+                                            <p class="day"> {$val.ctime|date="d",###}</p>
+                                            <p> {$val.ctime|date="Y-m",###}</p>
+                                        </div>
+                                        <div class="intro">
+                                            <h3>
+                                                <a href="{:U('Article/index',array('id'=>$val['id']))}" title="{$val.title}" target="_blank"
+                                                   class="tit">{$val.title}</a>
+                                            </h3>
+                                            <a href="{:U('Article/index',array('id'=>$val['id']))}" title="{$val.title}" target="_blank">{$val.content|strip_tags|mb_substr=0,60,'utf-8'}...</a>
+                                        </div>
+                                    </li>
+                                </foreach>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-yyczr">
+                <div class="s-yyczimg">
+                    <a href="zhishi/123.html" title="{$nutritionDetail.title}" target="_blank">
+                        <img src="{$nutritionDetail.pic}" width="444" height="302" alt="{$nutritionDetail.title}"/>
+                    </a>
+                </div>
+                <div class="s-yycznews">
+                    <h3><a href="{:U('Article/index',array('id'=>$nutritionDetail['id']))}" title="{$nutritionDetail.title}" target="_blank">{$nutritionDetail.title}</a></h3>
+                    <p>{$nutritionDetail.content|strip_tags|mb_substr=0,60,'utf-8'}...</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--中间结束-->
+
+
+<!-- 调用脚部文件 -->
+<include file = "Public:homefooter"  />

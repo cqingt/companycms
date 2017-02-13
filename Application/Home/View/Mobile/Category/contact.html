@@ -1,0 +1,31 @@
+<!-- 调用头部文件 -->
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+
+<div id="header" class="clearfix" style="position:relative;">
+    <div class="back">
+        <a title="返回" href="javascript:history.back();">
+            <img src="__PUBLIC__/Mobile/images/back.jpg" alt="分类">
+        </a>
+    </div>
+    <div class="cpaut">联系我们</div>
+    <div class="flbox"><img src="__PUBLIC__/Mobile/images/fl.jpg" alt="分类"></div>
+</div>
+
+<div class="xingxi clearfix">
+    <p class="content_img">
+        <div class="cp01b">
+            <dl class="lianxi">
+                <dt>{$SiteInfo.company}</dt>
+                <dd>电话：{$SiteInfo.telephone}</dd>
+                <dd>邮箱：{$SiteInfo.admin_email}</dd>
+                <dd>Q Q：{$SiteInfo.qq}</dd>
+                <dd>地址：{$SiteInfo.address}</dd>
+            </dl>
+        </div>
+    </p>
+</div>
+
+<!--中间结束-->
+
+<!-- 调用脚部文件 -->
+<include file="Public:homefooter"/>

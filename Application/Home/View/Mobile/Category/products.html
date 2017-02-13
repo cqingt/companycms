@@ -1,0 +1,42 @@
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+
+    <div id="header" class="clearfix" style="position:relative;">
+        <div class="back">
+            <a title="返回" href="javascript:history.back();">
+                <img src="__PUBLIC__/Mobile/images/back.jpg" alt="分类">
+            </a>
+        </div>
+        <div class="cpaut">水果专区</div>
+        <div class="flbox"><img src="__PUBLIC__/Mobile/images/fl.jpg" alt="分类"></div>
+    </div>
+    <div class="wap-lm">
+        <foreach name="productCategory" item="val">
+            <a class="sid_{$val.id}" href="{:U('Category/index', array('mobile'=>1,'cid'=> $cid, 'sid'=>$val['id']))}">{$val.name}</a>
+        </foreach>
+    </div>
+    <div class="cont clearfix">
+        <ul class="cplist clearfix">
+            <foreach name="productList" item="val">
+                <li>
+                    <a href="{:U('Category/product', array('mobile'=>1,'id'=>$val['id']))}">
+                        <img src="{$val.pic}">
+                        <p class="title">{$val.title}</p>
+                        <span class="title bg"></span>
+                    </a>
+                </li>
+            </foreach>
+        </ul>
+        <div style=" clear:both"></div>
+        <div class="pageListNav">
+            {$page}
+        </div>
+    </div>
+<!--中间结束-->
+
+<!--底部开始-->
+<include file="Public:homefooter"/>
+
+<script>
+    var _current_sid = "{$sid}";
+    $('.sid_' + _current_sid).addClass('zyhove');
+</script>

@@ -1,0 +1,45 @@
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+<!--头部结束-->
+
+<!--中间开始-->
+<div class="main">
+    <!-------------------------banner 开始-------------------------------->
+    <div class="zy_banner"><img src="./Public/Uploads/images/products.jpg" width="1004" height="310"/></div>
+    <!-------------------------banner 结束-------------------------------->
+
+    <div class="w1002">
+        <div class="s-zytop">
+            <ul class="clearfix">
+                <li>当前位置：<a href='/'>主页</a> > <a href='#'>水果详情</a> ></li>
+                <li class="s-gg">{$SiteInfo.brand}·{$SiteInfo.slogan}</li>
+            </ul>
+        </div>
+
+        <div class="s-zycenter">
+            <p class="s-btyw">PRODUCTS</p>
+            <p>水果详情</p>
+        </div>
+        <div class="zy-mume  clearfix">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="s-zyfoot s-zyfoots">
+            <h1 class="newsbts">{$detail.title}</h1>
+            <div class="newstime"> 发布时间：<a>{$detail.ctime|date='Y-m-d',###}</a>　浏览次数：<a>{$detail.view}</a>次　</div>
+            <div id="contentText">
+                <div style="text-align: center;">
+                    {$detail.content}
+                </div>
+            </div>
+            <div class="turn">
+                <p><span>上一篇:</span>：{$preStr}</p>
+                <p><span>下一篇:</span>：{$nextStr} </p>
+                <a class="back" href="{:U('Category/index', array('cid'=> $cid))}">【返回列表】</a></div>
+        </div>
+    </div>
+</div>
+<!--中间结束-->
+
+<!--底部开始-->
+<include file="Public:homefooter"/>

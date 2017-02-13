@@ -1,0 +1,41 @@
+<!-- 调用头部文件 -->
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+<!--中间开始-->
+
+    <div id="header" class="clearfix" style="position:relative;">
+        <div class="back">
+            <a title="返回" href="javascript:history.back();">
+                <img src="__PUBLIC__/Mobile/images/back.jpg" alt="分类">
+            </a>
+        </div>
+        <div class="cpaut">新闻资讯</div>
+        <div class="flbox"><img src="__PUBLIC__/Mobile/images/fl.jpg" alt="分类"></div>
+    </div>
+    <div class="wap-lm">
+        <foreach name="newsCategory" item="val">
+            <a href="{:U('Category/index', array('mobile'=>1,'cid' => $cid,'sid'=>$val['id']))}" class="new_item sid_{$val.id}" data-cid="{$val.id}">{$val.name}</a>
+        </foreach>
+    </div>
+    <ul class="newslist clearfix">
+        <foreach name="articleList" item="val">
+            <li class="class_{$val.fid}" data-href="{:U('Category/news',array('mobile'=>1,'cid' => $cid,'id'=>$val['id']))}">
+                <a href="{:U('Category/news',array('mobile'=>1,'cid' => $cid,'id'=>$val['id']))}" >{$val.title|strip_tags|mb_substr=0, 15,'utf-8'}
+                    <span class="fr">{$val.ctime|date="Y-m",###} </span>
+                </a>
+            </li>
+        </foreach>
+    </ul>
+    <div style=" clear:both"></div>
+    <div class="pageListNav">
+        {$page}
+    </div>
+
+
+    <!--中间结束-->
+<script>
+    $('.news').on('click', function () {
+        window.location.href = $(this).data('href');
+    })
+</script>
+<!-- 调用脚部文件 -->
+<include file="Public:homefooter"/>

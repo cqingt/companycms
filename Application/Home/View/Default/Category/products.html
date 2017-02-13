@@ -1,0 +1,65 @@
+<include file="Public:homeheader" title="{$SiteInfo.title}"/>
+
+<!--中间开始-->
+<div class="main">
+    <!-------------------------banner 开始-------------------------------->
+    <div class="zy_banner"><img src="./Public/Uploads/images/products.jpg" width="1004" height="310"/></div>
+    <!-------------------------banner 结束-------------------------------->
+    <div class="w1002">
+        <div class="s-zytop">
+            <ul class="clearfix">
+                <li>当前位置：<a href='/'>主页</a> > <a href='#'>水果专区</a> > <a href="#">{$category}</a></li>
+                <li class="s-gg">{$SiteInfo.brand}·{$SiteInfo.slogan}</li>
+            </ul>
+        </div>
+
+        <div class="s-zycenter">
+            <p class="s-btyw">PRODUCTS</p>
+            <p>水果专区</p>
+        </div>
+        <div class="zy-mume  clearfix">
+            <ul>
+                <foreach name="productCategory" item="val">
+                    <li>
+                        <h2><a class="sid_{$val.id}"
+                               href="{:U('Category/index', array('cid'=> $cid, 'sid'=>$val['id']))}">{$val.name}</a>
+                        </h2>
+                    </li>
+                </foreach>
+
+            </ul>
+        </div>
+        <div class="s-zyfoot">
+            <div class="cplist">
+                <ul class="clearfix">
+                    <foreach name="productList" item="val">
+                        <li>
+                            <a class="cpimg" href="{:U('Category/product', array('cid'=> $cid,'id'=>$val['id']))}" >
+                                <img src="{$val.pic}" width="300" height="300"/>
+                            </a>
+                            <h3>
+                                <a href="{:U('Category/product', array('cid'=> $cid,'id'=>$val['id']))}">{$val.title}</a>
+                            </h3>
+                            <a class="ckxx" href="{:U('Category/product', array('cid'=> $cid,'id'=>$val['id']))}">了解详情</a>
+                            <a href="{:U('Category/product', array('cid'=> $cid,'id'=>$val['id']))}" class="s-cphover"></a>
+                        </li>
+
+                    </foreach>
+                </ul>
+
+            </div>
+            {$page}
+
+        </div>
+    </div>
+</div>
+
+<!--中间结束-->
+
+<!--底部开始-->
+<include file="Public:homefooter"/>
+
+<script>
+    var _current_sid = "{$sid}";
+    $('.sid_' + _current_sid).addClass('zyhove');
+</script>

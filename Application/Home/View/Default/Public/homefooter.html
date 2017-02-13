@@ -1,0 +1,88 @@
+<!--底部开始-->
+<script type="text/javascript" src="__PUBLIC__/Default/js/top.js"></script>
+<div class="footer">
+    <div class="foot">
+        <div class="footl">
+            <ul>
+                <li class="s-dz">
+                    <p class="footone"><span>地址</span>／address</p>
+                    <p>{$SiteInfo.address}</p>
+                </li>
+                <li class="s-hopen">
+                    <p class="footone"><span>电话</span>／telephone</p>
+                    <p>{$SiteInfo.telephone}</p>
+                </li>
+                <li class="s-wz">
+                    <p class="footone"><span>网址</span>／Site</p>
+                    <p>http://<?php echo $_SERVER['HTTP_HOST']; ?></p>
+                </li>
+            </ul>
+        </div>
+        <div class="footr">
+            <div class="s-ewm"><img src="<?php echo $SiteInfo['qrcode']; ?>" alt=""/></div>
+            <div class="s-dbcd">
+                <ul>
+                    <li>
+                        <foreach name = "fenleiListone" item = "vo">
+                            <a href="{:U('Category/index',array('id'=>$vo['id']))}">{$vo.name}</a>  |
+                        </foreach>
+                        <a href="http://www.720map.com" target="_blank">720map</a>
+                    </li>
+                </ul>
+                <p>Copyright &copy; 2014-2017 www.720map.com 版权所有
+                    <a href="http://www.miibeian.gov.cn/" target="_blank">{$SiteInfo.icp}</a></p>
+                <p>技术支持：<a href="http://www.720map.com/" target="_blank">720map</a>
+                <p>
+                <p class="gjz">友情链接：
+                    <foreach name = "friendlinkarr" item = "vo">
+                        <a href='{$vo.url}' target='_blank'>{$vo.title}</a>
+                    </foreach>
+                   </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="floating_ck">
+    <dl>
+        <dt></dt>
+        <dd class="consult"><span>在线咨询</span>
+            <div class="floating_left"><a href="http://wpa.qq.com/msgrd?v=3&uin={$SiteInfo.qq}&site=qq&menu=yes">在线咨询</a>
+            </div>
+        </dd>
+        <dd class="quote"><span>索要报价</span>
+            <div class="floating_left"><a href="contact/contact.html">咨询代理价</a></div>
+        </dd>
+        <dd class="qrcord"><span>扫一扫</span>
+            <div class="floating_left floating_ewm"><i></i>
+                <p class="qrcord_p01">扫一扫<br>
+                    进入手机网站</p>
+                <p class="qrcord_p02">服务热线<br>
+                    <b>{$SiteInfo.telephone}<b></p>
+            </div>
+        </dd>
+        <dd class="return"><span onClick="gotoTop();return false;">返回顶部</span></dd>
+    </dl>
+</div>
+<script type="text/javascript">
+    var _set = null;
+    var _href = window.location.toString();
+    if (_href.indexOf('c=Category') != -1 ) {
+        var arr = _href.split('&');
+        for (var i = 0, l = arr.length; i < l; i++) {
+            if (arr[i].indexOf('cid=') != -1) {
+                var c_id = arr[i].substr(4);
+                if (c_id) {
+                    $('.nav').find('a').removeClass('s_nav');
+                    $('.c_id_' + c_id).addClass('s_nav');
+                    _set = 1;
+                }
+            }
+        }
+    }
+    if (!_set) {
+        $('.nav').find('a').first().addClass('s_nav');
+    }
+</script>
+<!--底部结束-->
+</body>
+</html>
